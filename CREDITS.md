@@ -1,0 +1,1 @@
+Text generated with OpenAI. Images from Unsplash/Pexels (hot-linked).

@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Microcontrollers 101",
+    "excerpt": "Microcontroller basics: pins, power domains, clocks, and GPIO.",
+    "tags": "Microcontrollers, Soldering",
+    "url": "./posts/microcontrollers-101/"
+  },
+  {
+    "title": "USB\u2011C Power Basics",
+    "excerpt": "Power Delivery profiles, e\u2011marked cables, and safe design limits.",
+    "tags": "Power, USB-C",
+    "url": "./posts/usb-c-power-basics/"
+  },
+  {
+    "title": "KiCad DRC Checklist",
+    "excerpt": "Rules to catch clearance errors before fabrication.",
+    "tags": "PCB, Tools",
+    "url": "./posts/kicad-drc-checklist/"
+  },
+  {
+    "title": "Debugging I\u00b2C",
+    "excerpt": "Diagnose stuck buses, missing pull-ups, and addressing issues.",
+    "tags": "Debugging, I2C",
+    "url": "./posts/debugging-i2c/"
+  },
+  {
+    "title": "ESP32 Wi\u2011Fi Primer",
+    "excerpt": "Connect to Wi\u2011Fi, publish to MQTT, OTA basics.",
+    "tags": "ESP32, Networking",
+    "url": "./posts/esp32-wifi-primer/"
+  },
+  {
+    "title": "Soldering 101",
+    "excerpt": "Temperature tips, tip care, and flux usage for clean joints.",
+    "tags": "Soldering, Tools",
+    "url": "./posts/soldering-101/"
+  },
+  {
+    "title": "Choosing a 3D Printer",
+    "excerpt": "FDM vs SLA, bed sizes, materials, and maintenance.",
+    "tags": "3D Printing, Tools",
+    "url": "./posts/choose-3d-printer/"
+  }
+]

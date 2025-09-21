@@ -1,0 +1,14 @@
+[
+  {
+    "term": "MCU",
+    "def": "Microcontroller Unit, a small computer on a single chip."
+  },
+  {
+    "term": "PD",
+    "def": "USB Power Delivery, a standard for higher power over USB-C."
+  },
+  {
+    "term": "DRC",
+    "def": "Design Rule Check in PCB tools to catch violations."
+  }
+]
