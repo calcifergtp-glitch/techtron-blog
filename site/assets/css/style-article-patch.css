@@ -1,0 +1,58 @@
+/* --- TechTron article layout enhancements (patch) --- */
+
+/* Base container */
+.container { max-width: 1120px; margin: 0 auto; padding: 1.25rem; }
+.prose { font-size: 1.06rem; line-height: 1.75; }
+
+/* Headings */
+.prose h1 { font-size: clamp(2rem, 2.5vw + 1rem, 3rem); line-height: 1.15; margin: 0 0 1rem; }
+.prose h2 { font-size: clamp(1.5rem, 1.2vw + 1rem, 2rem); margin: 2.25rem 0 0.75rem; }
+.prose h3 { font-size: 1.25rem; margin: 1.75rem 0 0.5rem; }
+
+/* Paragraphs & lists */
+.prose p { margin: 0.9rem 0; }
+.prose ul, .prose ol { margin: 0.9rem 0 1.2rem 1.25rem; }
+.prose li { margin: 0.4rem 0; }
+
+/* Lead intro */
+.lead { font-size: 1.15rem; opacity: 0.9; }
+
+/* Figures / images */
+figure { margin: 1.5rem 0; }
+figure img { display: block; width: 100%; height: auto; border-radius: 12px; }
+figcaption { font-size: 0.9rem; opacity: 0.8; margin-top: 0.4rem; text-align: center; }
+
+/* Inline images that float within paragraphs (wrap in .inline) */
+.inline { display: flow-root; margin: 1rem 0; }
+.inline img { width: 320px; max-width: 45%; height: auto; border-radius: 10px; }
+.inline.left img { float: left; margin: 0.25rem 1rem 0.75rem 0; }
+.inline.right img { float: right; margin: 0.25rem 0 0.75rem 1rem; }
+
+/* Gallery grid */
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin: 1.25rem 0; }
+.gallery img { width: 100%; height: auto; border-radius: 10px; }
+
+/* Pull quote */
+.pull-quote { border-left: 4px solid var(--accent, #5b8def); padding: 0.5rem 1rem; margin: 1.25rem 0; font-style: italic; }
+
+/* Callout boxes */
+.callout { border: 1px solid rgba(0,0,0,.1); border-radius: 12px; padding: 1rem; margin: 1.25rem 0; background: var(--callout-bg, rgba(0,0,0,.03)); }
+.callout.warn { border-color: #e1a500; }
+.callout.tip { border-color: #4caf50; }
+
+/* Code blocks */
+pre, code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Roboto Mono", monospace; }
+pre { padding: 0.85rem 1rem; border-radius: 12px; overflow: auto; background: rgba(0,0,0,.06); margin: 1rem 0; }
+
+/* Top nav */
+.site-header { position: sticky; top: 0; z-index: 20; backdrop-filter: saturate(1.2) blur(6px); }
+.site-nav a { text-decoration: none; padding: .5rem .75rem; border-radius: 10px; transition: background .2s ease; }
+.site-nav a:hover { background: rgba(0,0,0,.06); }
+
+/* Light/Dark theme (keeps your toggle logic) */
+:root { --bg:#ffffff; --fg:#1b1b1f; --accent:#5b8def; --muted:#646b76; }
+html[data-theme="dark"] { --bg:#0e1014; --fg:#e5e7eb; --accent:#8ab4ff; --muted:#9aa0a6; }
+body { background:var(--bg); color:var(--fg); }
+
+/* Footer links etc. */
+a { color: var(--accent); }

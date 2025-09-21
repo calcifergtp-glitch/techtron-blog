@@ -1,6 +1,7 @@
 [
   {
     "title": "Microcontrollers 101",
+<<<<<<< HEAD
     "excerpt": "Microcontroller basics: pins, power domains, clocks, and GPIO.",
     "tags": "Microcontrollers, Soldering",
     "url": "./posts/microcontrollers-101/"
@@ -40,5 +41,118 @@
     "excerpt": "FDM vs SLA, bed sizes, materials, and maintenance.",
     "tags": "3D Printing, Tools",
     "url": "./posts/choose-3d-printer/"
+=======
+    "url": "posts/microcontrollers-101/",
+    "excerpt": "choosing and deploying microcontrollers",
+    "tags": [
+      "electronics",
+      "guide"
+    ]
+  },
+  {
+    "title": "USB\u2011C Power Basics",
+    "url": "posts/usb-c-power-basics/",
+    "excerpt": "designing with USB\u2011C power delivery and protection",
+    "tags": [
+      "electronics",
+      "guide"
+    ]
+  },
+  {
+    "title": "KiCad DRC Checklist",
+    "url": "posts/kicad-drc-checklist/",
+    "excerpt": "design rule checks that prevent painful respins",
+    "tags": [
+      "electronics",
+      "guide"
+    ]
+  },
+  {
+    "title": "Debugging I\u00b2C Like a Pro",
+    "url": "posts/debugging-i2c/",
+    "excerpt": "I\u00b2C probing, pull\u2011ups, and timing analysis",
+    "tags": [
+      "electronics",
+      "guide"
+    ]
+  },
+  {
+    "title": "ESP32 Wi\u2011Fi Primer",
+    "url": "posts/esp32-wifi-primer/",
+    "excerpt": "bringing Wi\u2011Fi online with ESP32 and solid firmware patterns",
+    "tags": [
+      "electronics",
+      "guide"
+    ]
+  },
+  {
+    "title": "Soldering 101",
+    "url": "posts/soldering-101/",
+    "excerpt": "techniques, tips, and tool selection for better joints",
+    "tags": [
+      "electronics",
+      "guide"
+    ]
+  },
+  {
+    "title": "Choose a 3D Printer for Electronics",
+    "url": "posts/choose-3d-printer/",
+    "excerpt": "selecting printers for enclosures and jigs",
+    "tags": [
+      "electronics",
+      "guide"
+    ]
+  },
+  {
+    "title": "Raspberry Pi Home Server",
+    "url": "posts/raspberry-pi-home-server/",
+    "excerpt": "turning a Pi into a reliable home server",
+    "tags": [
+      "electronics",
+      "guide"
+    ]
+  },
+  {
+    "title": "PCB Fundamentals",
+    "url": "posts/pcb-fundamentals/",
+    "excerpt": "stackups, planes, return paths, and routing priorities",
+    "tags": [
+      "electronics",
+      "guide"
+    ]
+  },
+  {
+    "title": "IoT Security Basics",
+    "url": "posts/iot-security-basics/",
+    "excerpt": "threat modeling, OTA updates, and safe defaults",
+    "tags": [
+      "electronics",
+      "guide"
+    ]
+  },
+  {
+    "title": "IoT Weather Station",
+    "url": "projects/iot-weather-station.html",
+    "excerpt": "ESP32 + BME280 + Grafana dashboard.",
+    "tags": [
+      "project"
+    ]
+  },
+  {
+    "title": "Custom PCB Keyboard",
+    "url": "projects/custom-pcb-keyboard.html",
+    "excerpt": "Hot\u2011swap, per\u2011key RGB, QMK/VIA firmware.",
+    "tags": [
+      "project"
+    ]
+  },
+  {
+    "title": "DIY Reflow Oven",
+    "url": "projects/diy-reflow-oven.html",
+    "excerpt": "PID\u2011controlled toaster oven for SMD reflow.",
+    "tags": [
+      "project"
+    ]
+>>>>>>> b35f2b9 (deploy: TechTron fixed4 — long-form posts + Home nav fix)
   }
 ]

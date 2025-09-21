@@ -1,9 +1,23 @@
 {
   "name": "TechTron",
   "short_name": "TechTron",
+<<<<<<< HEAD
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0b0f14",
   "theme_color": "#4361ee",
   "icons": []
+=======
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b0d10",
+  "theme_color": "#0b0d10",
+  "icons": [
+    {
+      "src": "assets/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+>>>>>>> b35f2b9 (deploy: TechTron fixed4 — long-form posts + Home nav fix)
 }

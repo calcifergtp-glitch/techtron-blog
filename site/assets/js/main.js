@@ -1,36 +1,78 @@
+/* TechTron main.js — nav fixes + theme + helpers */
 
-(function(){
-  console.log("TechTron loaded");
-  const t=document.querySelector('[data-theme-toggle]');
-  if(t){
-    t.addEventListener('click',()=>{
-      document.documentElement.classList.toggle('light');
-      localStorage.setItem('theme',document.documentElement.classList.contains('light')?'light':'dark');
+(function() {
+  // ----- CONFIG / BASE -------------------------------------------------------
+  const META = document.querySelector('meta[name="site-base"]');
+  const SITE_BASE = (META && META.content) || 'https://calcifergtp-glitch.github.io/techtron-blog/';
+
+  // Map common nav labels -> page paths inside /site
+  const NAV_MAP = {
+    'home': 'index.html',
+    'projects': 'projects.html',
+    'about': 'about.html',
+    'search': 'search.html',
+    'contact': 'contact.html'
+  };
+
+  // Ensure a URL points at the right place under GitHub Pages subpath
+  function toSiteUrl(path) {
+    if (/^https?:\/\//i.test(path)) return path; // leave external links
+    try {
+      const u = new URL(path, SITE_BASE);
+      return u.href;
+    } catch {
+      return SITE_BASE;
+    }
+  }
+
+  // Fix all top nav links & logo no matter where we are (posts/projects)
+  function fixNavLinks() {
+    const anchors = [
+      ...document.querySelectorAll('.site-nav a'),
+      ...document.querySelectorAll('.logo, .logo-link, a.nav-home')
+    ];
+
+    anchors.forEach(a => {
+      const raw = (a.getAttribute('data-href') || a.getAttribute('href') || '').trim();
+      if (!raw) return;
+
+      // If a "data-href" exists, trust it, otherwise map by link text
+      let path = raw;
+      if (!a.hasAttribute('data-href')) {
+        const label = (a.textContent || '').toLowerCase().trim();
+        if (NAV_MAP[label]) path = NAV_MAP[label];
+      }
+
+      a.setAttribute('href', toSiteUrl(path));
     });
-    const s=localStorage.getItem('theme');
-    if(s==='light') document.documentElement.classList.add('light');
+
+    // Make sure any "back-home" helpers point to the site root
+    document.querySelectorAll('.back-home, .nav-home').forEach(a => {
+      a.setAttribute('href', toSiteUrl('index.html'));
+    });
   }
-  async function runSearch(q){
-    try{
-      const res=await fetch('./data/search-index.json');
-      const items=await res.json();
-      const out=document.getElementById('search-results');
-      if(!out) return;
-      const r=items.filter(it=>(it.title+it.tags+it.excerpt).toLowerCase().includes(q.toLowerCase()));
-      out.innerHTML=r.map(r=>`<div class="card"><a href="${r.url}"><strong>${r.title}</strong></a><div class="byline">${r.excerpt}</div></div>`).join('')||'<div class="byline">No results.</div>';
-    }catch(e){ console.error(e); }
+
+  // ----- THEME ---------------------------------------------------------------
+  function initTheme() {
+    const key = 'tt-theme';
+    const stored = localStorage.getItem(key);
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = stored || (prefersDark ? 'dark' : 'light');
+    document.documentElement.dataset.theme = theme;
+
+    const btn = document.querySelector('[data-toggle-theme]');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const next = (document.documentElement.dataset.theme === 'dark') ? 'light' : 'dark';
+        document.documentElement.dataset.theme = next;
+        localStorage.setItem(key, next);
+      });
+    }
   }
-  const input=document.getElementById('search-input');
-  if(input){ input.addEventListener('input',e=>runSearch(e.target.value)); runSearch(input.value||''); }
-  window.loadComments=function(repo){
-    const d=document.createElement('script');
-    d.src='https://utteranc.es/client.js';
-    d.setAttribute('repo',repo);
-    d.setAttribute('issue-term','pathname');
-    d.setAttribute('label','comments');
-    d.setAttribute('theme','github-dark');
-    d.crossOrigin='anonymous';
-    d.async=true;
-    (document.getElementById('comments')||document.body).appendChild(d);
-  }
+
+  // ----- INIT ----------------------------------------------------------------
+  document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
+    fixNavLinks();
+  });
 })();

@@ -1,19 +1,31 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> b35f2b9 (deploy: TechTron fixed4 — long-form posts + Home nav fix)
 name: Deploy static site to Pages
 on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
+<<<<<<< HEAD
 
+=======
+>>>>>>> b35f2b9 (deploy: TechTron fixed4 — long-form posts + Home nav fix)
 permissions:
   contents: read
   pages: write
   id-token: write
+<<<<<<< HEAD
 
 concurrency:
   group: pages
   cancel-in-progress: true
 
+=======
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+>>>>>>> b35f2b9 (deploy: TechTron fixed4 — long-form posts + Home nav fix)
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,7 +35,10 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
+<<<<<<< HEAD
 
+=======
+>>>>>>> b35f2b9 (deploy: TechTron fixed4 — long-form posts + Home nav fix)
   deploy:
     needs: build
     runs-on: ubuntu-latest

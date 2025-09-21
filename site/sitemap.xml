@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+<<<<<<< HEAD
 <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/index.html</loc></url>
 <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/about.html</loc></url>
 <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/projects.html</loc></url>
@@ -11,3 +12,28 @@
 <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/posts/soldering-101/</loc></url>
 <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/posts/choose-3d-printer/</loc></url>
 </urlset>
+=======
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/about.html</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/projects.html</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/contact.html</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/privacy.html</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/terms.html</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/credits.html</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/search.html</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/404.html</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/posts/microcontrollers-101/</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/posts/usb-c-power-basics/</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/posts/kicad-drc-checklist/</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/posts/debugging-i2c/</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/posts/esp32-wifi-primer/</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/posts/soldering-101/</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/posts/choose-3d-printer/</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/posts/raspberry-pi-home-server/</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/posts/pcb-fundamentals/</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/posts/iot-security-basics/</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/projects/iot-weather-station.html</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/projects/custom-pcb-keyboard.html</loc></url>
+  <url><loc>https://calcifergtp-glitch.github.io/techtron-blog/projects/diy-reflow-oven.html</loc></url>
+</urlset>
+>>>>>>> b35f2b9 (deploy: TechTron fixed4 — long-form posts + Home nav fix)
